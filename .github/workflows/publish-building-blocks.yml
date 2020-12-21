@@ -18,7 +18,6 @@ env:
   DOTNET_VERSION: 5.0.100
 
   PROJECT_PATH: ./src/BuildingBlocks/MicroCommerce.Shared
-  NUGET_SOURCE: https://nuget.pkg.github.com/bao2703/micro-commerce
 
 jobs:
   publish:
@@ -45,5 +44,4 @@ jobs:
       uses: rohith/publish-nuget@v2
       with:
         PROJECT_FILE_PATH: ${{env.PROJECT_PATH}}/MicroCommerce.Shared.csproj
-        NUGET_SOURCE: ${{env.NUGET_SOURCE}}
-        NUGET_KEY: ${{secrets.CR_PAT}}
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
