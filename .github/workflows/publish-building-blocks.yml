@@ -18,7 +18,7 @@ env:
   DOTNET_VERSION: 5.0.100
 
   PROJECT_PATH: ./src/BuildingBlocks/MicroCommerce.Shared
-  NUGET_SOURCE: https://nuget.pkg.github.com/bao2703
+  NUGET_SOURCE: https://nuget.pkg.github.com/bao2703/micro-commerce
 
 jobs:
   publish:
