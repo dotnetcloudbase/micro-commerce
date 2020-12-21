@@ -18,6 +18,7 @@ env:
   DOTNET_VERSION: 5.0.100
 
   PROJECT_PATH: ./src/BuildingBlocks/MicroCommerce.Shared
+  NUGET_SOURCE: https://nuget.pkg.github.com/bao2703/index.json
 
 jobs:
   publish:
@@ -40,9 +41,9 @@ jobs:
       working-directory: ${{env.PROJECT_PATH}}
       run: dotnet build --no-restore -c Release
 
-    - name: publish on version change
+    - name: Pack and Publish package to nuget
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: ${{env.PROJECT_PATH}}
-        NUGET_SOURCE: https://nuget.pkg.github.com/bao2703/index.json
+        PROJECT_FILE_PATH: ${{env.PROJECT_PATH}}/MicroCommerce.Shared
+        NUGET_SOURCE: ${{env.NUGET_SOURCE}}
         NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
