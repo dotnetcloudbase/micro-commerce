@@ -44,6 +44,6 @@ jobs:
     - name: Pack and Publish package to nuget
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: ${{env.PROJECT_PATH}}/MicroCommerce.Shared
+        PROJECT_FILE_PATH: ${{env.PROJECT_PATH}}/MicroCommerce.Shared.csproj
         NUGET_SOURCE: ${{env.NUGET_SOURCE}}
         NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
