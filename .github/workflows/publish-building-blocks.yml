@@ -46,4 +46,4 @@ jobs:
       with:
         PROJECT_FILE_PATH: ${{env.PROJECT_PATH}}/MicroCommerce.Shared.csproj
         NUGET_SOURCE: ${{env.NUGET_SOURCE}}
-        NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
+        NUGET_KEY: ${{secrets.CR_AT}}
